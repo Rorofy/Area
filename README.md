@@ -2,7 +2,7 @@ AREA
 
 One place where you can automate your internet life.
 
-To launch this project, you will need docker and docker-componse present on your pc.
+To launch this project, you will need docker and docker-compose present on your pc.
 
 You can simply launch a docker-compose up --build at the root of the repository.
 
