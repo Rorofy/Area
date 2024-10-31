@@ -1,0 +1,58 @@
+version: "3"
+
+volumes:
+  kms:
+
+services:
+  server:
+    restart: on-failure
+    container_name: backend-server
+    image: node:lts
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://user:pass@postgres:5432/db
+      NODE_ENV: development
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    command: "sh -c 'cd /app && npm install && npm run dev'"
+    volumes:
+      - ./server:/app
+      - kms:/usr/share/data
+
+  postgres:
+    restart: on-failure
+    container_name: database
+    image: postgres:latest
+    ports:
+      - "35432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: db
+
+  client_web:
+    container_name: front-web
+    build: ./web
+    depends_on:
+      - server
+    environment:
+      NODE_ENV: development
+      PORT: 8000
+    ports:
+      - "8000:8000"
+      - "8081:8000"
+    command: >
+      bash -c " npm install --save axios vue-axios && npm run serve"
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+      - kms:/usr/share/data
+
+  client_mobile:
+    container_name: front-mobile
+    volumes: 
+      - ./mobile:/app
+      - kms:/usr/share/data
+    build: ./mobile

@@ -1,0 +1,19 @@
+{
+  "google_clientID": "285291506683-jh27rpkr75fd2au5akr7pgr10n0l3ftn.apps.googleusercontent.com",
+  "google_secret": "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",
+  "twitch_clientID": "r6b8dtgdc2tqyjjtfghb0yc8czx9hq",
+  "twitchExtension_clientID": "z21lkux5co4acyqjf6wfttli834ewd",
+  "twitch_secret": "bakrzwdsvdyincc10siv2ao7u6q5mj",
+  "reddit_clientID": "jG4djalUF64-pwu8lbi_0A",
+  "reddit_secret": "GHkFaO3agibqmJmfL0yyNp7DNSjruA",
+  "gitlab_clientID": "fdeca4311fd69d73b3855ab5ed38ae32e7ba65da57d23392426935c12449f5c1",
+  "gitlab_secret": "31663c96f4a456a3c019f57bdc9f95933ee73235a76d1abb83b12619cf8e567a",
+  "gitlab_codeVerifier": "zpa3QqniXznBUr9MmVhABQvRWsz19rpTZdAJcWoVh5MRpWkz9nLz7rVPWyJ03RUXfQy2FtscAzJiKTcAKS8X96cwV6bO7vnv2wXL",
+  "github_clientID": "f11cdddfcd3a54b5c355",
+  "github_secret": "e152309072fe0fb5d0e07a408ab174092f702212",
+  "messenger_clientID": "478779227259044",
+  "messenger_secret": "4b84f1e7396b028cfe4115b50c745170",
+  "discord_clientID": "940436141847482398",
+  "discord_secret": "3hp4Zv7WJtFNXYymTkhWHmYjG1UjKGmZ",
+  "jwt_key": "AIzaSyAp0ZMwljgGvsfghKWj0UazizVKSrqF2uk"
+}
